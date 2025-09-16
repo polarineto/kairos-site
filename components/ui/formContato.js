@@ -47,4 +47,14 @@ export default function FormContato() {
               />
               <Button
                 type="submit"
-                className="bg-[#bfa144] text-white hover:bg-
+                className="bg-[#bfa144] text-white hover:bg-[#a98f39]"
+              >
+                Enviar
+              </Button>
+            </CardContent>
+          </Card>
+        </form>
+      </div>
+    </section>
+  );
+}
