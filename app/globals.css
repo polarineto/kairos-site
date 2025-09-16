@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos opcionais personalizados */
 body {
-  font-family: system-ui, sans-serif;
+  font-family: sans-serif;
+  background-color: white;
+  color: #1f3d2d;
+  scroll-behavior: smooth;
+}
+
+/* Corrige âncoras com header fixo (altura = 80px) */
+section[id]::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
 }
