@@ -1,93 +1,121 @@
-export const metadata = {
-  title: 'Kairos Inteli.tech',
-  description: 'Conselheiros estratégicos para empresas no mercado financeiro.',
-};
+"use client";
 
-import './globals.css';
-import { useState } from 'react';
+import { useState } from "react";
+import FormContato from "../components/ui/formContato";
 
-export default function RootLayout({ children }) {
+export default function Home() {
   return (
-    <html lang="pt-br">
-      <body className="font-modern text-gray-800">
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
-}
-
-// COMPONENTE HEADER
-function Header() {
-  const [menuAberto, setMenuAberto] = useState(false);
-
-  return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo apenas */}
-          <div className="flex-shrink-0">
-            <a href="/">
-              <img
-                src="/logo-kairos.png"
-                alt="Logo Kairós"
-                className="h-10 w-auto sm:h-12"
-              />
-            </a>
+    <main>
+      {/* HERO */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-white text-center px-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl font-bold text-olive mb-6 leading-tight">
+            Transforme Oportunidades em{" "}
+            <span className="text-gold">Resultados Estratégicos</span>
+          </h1>
+          <p className="text-lg text-gray-600 mb-6">
+            Aconselhamento estratégico especializado para empresas que desejam
+            atuar no mercado financeiro.
+          </p>
+          <div className="aspect-video max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg mt-8">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/DvN6dS4eN9k"
+              title="Apresentação Institucional"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
+        </div>
+      </section>
 
-          {/* Botão Mobile */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMenuAberto(!menuAberto)}
-              className="text-olive focus:outline-none"
-              aria-label="Abrir menu"
-            >
-              {menuAberto ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
+      {/* SERVIÇOS */}
+      <section id="servicos" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-olive mb-12">Nossos Serviços</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-olive mb-2">Braço Financeiro</h3>
+              <p className="text-gray-600 text-sm">
+                Criação de braço financeiro usando serviços especializados de terceiros (BaaS).
+              </p>
+            </div>
+            <div className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-olive mb-2">Instituição Regulada</h3>
+              <p className="text-gray-600 text-sm">
+                Estruturação de instituição financeira regulada com compliance e governança.
+              </p>
+            </div>
+            <div className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-olive mb-2">Gestão de Riscos</h3>
+              <p className="text-gray-600 text-sm">
+                Análise de oportunidades e riscos com base em dados e inteligência.
+              </p>
+            </div>
+            <div className="p-6 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-olive mb-2">Segurança Cibernética</h3>
+              <p className="text-gray-600 text-sm">
+                Avaliação de vulnerabilidades e proteção de ativos digitais estratégicos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ESG */}
+      <section id="esg" className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-green-900 mb-4">Compromisso ESG</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Todos os clientes da Kairós contribuem diretamente com a melhoria do 3º setor.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl p-10 shadow-lg grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h3 className="text-xl font-semibold text-green-800 mb-4">Retribuição Social</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                Parte do valor investido em nossos serviços é convertido em
+                aconselhamento especializado para organizações sociais, inclusive
+                podendo ser indicadas pelos próprios clientes.
+              </p>
+              <p className="text-gray-500 text-sm">
+                Apoiamos boas práticas de gestão, controles e transparência no
+                terceiro setor.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-green-100 to-yellow-100 p-6 rounded-xl shadow-md">
+                <p className="text-green-800 font-semibold">
+                  Ética • Responsabilidade • Inovação
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* STARTUPS */}
+      <section id="startups" className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-olive mb-6">Programa para Startups</h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Startups selecionadas recebem 2 sessões gratuitas com conselheiros da Kairós.
+          </p>
+          <div className="bg-gradient-to-r from-gold-light to-gold p-8 rounded-xl shadow-lg text-white">
+            <h3 className="text-2xl font-bold mb-4">Inscreva seu case!</h3>
+            <p className="text-white mb-6">
+              A banca KSP selecionará os desafios mais estratégicos para mentoria.
+            </p>
+            <button className="bg-white text-gold-dark px-6 py-2 rounded font-semibold hover:bg-yellow-100">
+              Quero Participar
             </button>
           </div>
-
-          {/* Navegação */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="#servicos" className="text-gray-700 hover:text-olive transition-colors font-medium">Serviços</a>
-            <a href="#esg" className="text-gray-700 hover:text-olive transition-colors font-medium">ESG</a>
-            <a href="#startups" className="text-gray-700 hover:text-olive transition-colors font-medium">Startups</a>
-            <a href="#contato" className="text-gray-700 hover:text-olive transition-colors font-medium">Contato</a>
-          </nav>
         </div>
+      </section>
 
-        {/* Mobile Menu */}
-        {menuAberto && (
-          <div className="md:hidden mt-2 space-y-2 pb-4 animate-fade-in">
-            <a href="#servicos" className="block text-gray-700 hover:text-olive font-medium">Serviços</a>
-            <a href="#esg" className="block text-gray-700 hover:text-olive font-medium">ESG</a>
-            <a href="#startups" className="block text-gray-700 hover:text-olive font-medium">Startups</a>
-            <a href="#contato" className="block text-gray-700 hover:text-olive font-medium">Contato</a>
-          </div>
-        )}
-      </div>
-    </header>
-  );
-}
-
-// COMPONENTE FOOTER
-function Footer() {
-  return (
-    <footer className="bg-olive-dark text-white py-8 mt-12">
-      <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <p className="text-sm text-gray-200">
-          &copy; {new Date().getFullYear()} Kairós Inteli.tech. Todos os direitos reservados.
-        </p>
-      </div>
-    </footer>
+      {/* CONTATO */}
+      <FormContato />
+    </main>
   );
 }
