@@ -14,8 +14,7 @@ export default function Home() {
             <span className="text-gold">Resultados Estratégicos</span>
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            Aconselhamento estratégico especializado para empresas que desejam
-            atuar no mercado financeiro.
+            Aconselhamento estratégico especializado para empresas que desejam atuar no mercado financeiro.
           </p>
           <div className="aspect-video max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg mt-8">
             <iframe
@@ -75,13 +74,10 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-semibold text-green-800 mb-4">Retribuição Social</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Parte do valor investido em nossos serviços é convertido em
-                aconselhamento especializado para organizações sociais, inclusive
-                podendo ser indicadas pelos próprios clientes.
+                Parte do valor investido em nossos serviços é convertido em aconselhamento especializado para organizações sociais, inclusive podendo ser indicadas pelos próprios clientes.
               </p>
               <p className="text-gray-500 text-sm">
-                Apoiamos boas práticas de gestão, controles e transparência no
-                terceiro setor.
+                Apoiamos boas práticas de gestão, controles e transparência no terceiro setor.
               </p>
             </div>
             <div className="text-center">
