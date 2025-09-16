@@ -1,34 +1,31 @@
 "use client";
 
-import { useState } from "react";
 import FormContato from "../components/ui/formContato";
 
 export default function Home() {
   return (
     <main>
-      {/* HERO */}
+      {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-white text-center px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold text-olive mb-6 leading-tight">
-            Transforme Oportunidades em{" "}
+            Transforme Oportunidades em {" "}
             <span className="text-gold">Resultados Estratégicos</span>
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            Aconselhamento estratégico especializado para empresas que desejam atuar no mercado financeiro.
+            Aconselhamento estratégico especializado para empresas que desejam
+            atuar no mercado financeiro.
           </p>
           <div className="aspect-video max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg mt-8">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/DvN6dS4eN9k"
-              title="Apresentação Institucional"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <video controls className="w-full h-full rounded-xl">
+              <source src="/video-kairos.mp4" type="video/mp4" />
+              Seu navegador não suporta a reprodução de vídeos.
+            </video>
           </div>
         </div>
       </section>
 
-      {/* SERVIÇOS */}
+      {/* Serviços */}
       <section id="servicos" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-olive mb-12">Nossos Serviços</h2>
@@ -74,10 +71,13 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-semibold text-green-800 mb-4">Retribuição Social</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Parte do valor investido em nossos serviços é convertido em aconselhamento especializado para organizações sociais, inclusive podendo ser indicadas pelos próprios clientes.
+                Parte do valor investido em nossos serviços é convertido em
+                aconselhamento especializado para organizações sociais, inclusive
+                podendo ser indicadas pelos próprios clientes.
               </p>
               <p className="text-gray-500 text-sm">
-                Apoiamos boas práticas de gestão, controles e transparência no terceiro setor.
+                Apoiamos boas práticas de gestão, controles e transparência no
+                terceiro setor.
               </p>
             </div>
             <div className="text-center">
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STARTUPS */}
+      {/* Startups */}
       <section id="startups" className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-olive mb-6">Programa para Startups</h2>
@@ -110,7 +110,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTATO */}
+      {/* Contato */}
       <FormContato />
     </main>
   );
