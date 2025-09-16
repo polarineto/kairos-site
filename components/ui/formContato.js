@@ -29,7 +29,7 @@ export default function FormContato() {
     <section id="contato" className="py-20 bg-gray-100">
       <div className="max-w-2xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-olive mb-6">
-          Solicite um Aconselhamento
+          Informe seus Dados
         </h2>
         <form onSubmit={handleSubmit}>
           <Card className="shadow-lg">
