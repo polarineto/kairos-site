@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import FormContato from "../components/FormContato";
+import FormContato from "../components/ui/FormContato";
 
 export default function Home() {
   const [menuAberto, setMenuAberto] = useState(false);
