@@ -1,26 +1,50 @@
 "use client";
 
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Button } from "./ui/button";
+import React from "react";
+import { Card, CardContent } from "./card";
+import { Input } from "./input";
+import { Textarea } from "./textarea";
+import { Button } from "./button";
 
 export default function FormContato() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    const mailtoLink = `mailto:marketing@kairosinteli.tech?subject=Aconselhamento Kairós&body=${
+      "Nome: " + data.nome + "%0D%0A" +
+      "Cargo: " + data.cargo + "%0D%0A" +
+      "Empresa: " + data.empresa + "%0D%0A" +
+      "CNPJ: " + data.cnpj + "%0D%0A" +
+      "Setor: " + data.setor + "%0D%0A" +
+      "Aconselhamento: " + data.aconselhamento
+    }`;
+
+    window.location.href = mailtoLink;
+  };
+
   return (
-    <form id="contato" className="bg-white rounded-xl shadow-md p-8 w-full max-w-xl mx-auto mt-12 space-y-4">
-      <h2 className="text-center text-lg font-semibold text-green-900">Solicite um Aconselhamento</h2>
-
-      <Input type="text" placeholder="Nome completo" required />
-      <Input type="text" placeholder="Cargo" />
-      <Input type="text" placeholder="Nome da empresa" />
-      <Input type="text" placeholder="CNPJ da empresa" />
-      <Input type="text" placeholder="Setor de atuação" />
-      <Textarea placeholder="Descreva o aconselhamento desejado" rows={4} />
-
-      <div className="text-center">
-        <Button type="submit" className="bg-gold text-white px-6 py-2 rounded-md hover:opacity-90 transition-all">
-          Enviar Solicitação
-        </Button>
-      </div>
-    </form>
-  );
-}
+    <section id="contato" className="py-20 bg-gray-100">
+      <div className="max-w-2xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center text-olive mb-6">
+          Solicite um Aconselhamento
+        </h2>
+        <form onSubmit={handleSubmit}>
+          <Card className="shadow-lg">
+            <CardContent className="grid gap-4 p-6">
+              <Input name="nome" placeholder="Nome Completo" required />
+              <Input name="cargo" placeholder="Cargo" required />
+              <Input name="empresa" placeholder="Nome da Empresa" required />
+              <Input name="cnpj" placeholder="CNPJ da Empresa" required />
+              <Input name="setor" placeholder="Setor de Atuação" required />
+              <Textarea
+                name="aconselhamento"
+                placeholder="Descreva o Aconselhamento Desejado"
+                rows={5}
+                required
+              />
+              <Button
+                type="submit"
+                className="bg-[#bfa144] text-white hover:bg-
