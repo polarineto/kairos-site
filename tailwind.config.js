@@ -1,3 +1,5 @@
+// tailwind.config.js
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,13 +9,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        olive: "#1b4820",
-        "olive-dark": "#143819",
+        olive: "#1d3b1d",
         gold: "#bfa144",
-        "gold-light": "#f4e2b5",
-        "gold-dark": "#8a6c1e",
+        "gold-light": "#e9d8a6",
+        "gold-dark": "#8c6d1f",
       },
     },
   },
   plugins: [],
-};
+}
